@@ -36,17 +36,17 @@ Infinite Void() {
     int n;
     cin >> n;
     if(n & 1){
-        if(n <= 25) cout << -1 << endl; 
-        else{
+        if(n >= 27){
             cout << "1 ";
             for(int i=2;i<=5;i++) cout << i << " " << i << " ";
             cout << "1 ";
             for(int i=6;i<=11;i++) cout << i << " " << i << " ";
             cout << "12 13 13 1 12 ";
-            int rem = n - 27;
-            for(int i=1;i<=rem/2;i++) cout << n - i << " " << n - i << " ";
+            int rem = (n - 27) / 2;
+            for(int i=14;i<rem+14;i++) cout << i << " " << i << " ";
             cout << endl;
-        }
+        }   
+        else cout << -1 << endl;
     }
     else{
         for(int i=1;i<=n/2;i++) cout << i << " " << i << " ";
